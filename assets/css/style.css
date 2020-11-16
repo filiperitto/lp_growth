@@ -1981,6 +1981,13 @@ MENU HAMBUGER ANIMATION
   line-height: 27px;
   letter-spacing: 0em;
   text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   z-index: 1;
@@ -2831,6 +2838,13 @@ section .subtitle {
   color: #fff;
   margin-top: 65px;
   margin-bottom: 5px;
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 92px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .moduleDivider-banner.third .text-box p {
@@ -2840,9 +2854,11 @@ section .subtitle {
   color: #fff;
   opacity: 1;
   margin-bottom: 5px;
-  font-family: Oxygen;
+  font-family: 'Lato';
+  font-size: 45px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 64px;
   letter-spacing: 0px;
   text-align: center;
 }
@@ -3105,8 +3121,6 @@ section .subtitle {
 .moduleAbout .box-cont {
   padding-top: 80px;
   padding-bottom: 80px;
-  border-top: 2px solid #5FBF40;
-  border-bottom: 2px solid #5FBF40;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3152,10 +3166,25 @@ section .subtitle {
 .moduleAbout .text-box h1 {
   display: inline-block;
   margin-top: 0;
+  font-family: 'Poppins';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #041D27;
 }
 
-.moduleAbout .text-box h1 strong {
-  color: #5FBF40;
+.moduleAbout .text-box p {
+  font-family: 'Lato';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: #838383;
 }
 
 .moduleAbout .text-box p strong {
@@ -3165,6 +3194,18 @@ section .subtitle {
 .moduleAbout .wrapper-video {
   width: 100%;
   position: relative;
+}
+
+.moduleAbout .wrapper-video:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  border-radius: 3px;
+  border: 4px solid #041D27;
+  z-index: -1;
 }
 
 .moduleAbout .wrapper-video .placeholder {
@@ -3459,12 +3500,11 @@ section .subtitle {
 }
 
 .moduleFaq {
-  background: #fff;
+  background: #E7E7E7;
   padding-bottom: 80px;
 }
 
 .moduleFaq .box-cont {
-  border-bottom: 2px solid #5FBF40;
   padding-bottom: 50px;
 }
 
@@ -3473,6 +3513,28 @@ section .subtitle {
   height: auto;
   text-align: center;
   margin-bottom: 60px;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
+  color: #041D27;
+}
+
+.moduleFaq .sub-title {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: #041D27;
 }
 
 .moduleFaq .accordion {
@@ -3485,10 +3547,11 @@ section .subtitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #FFFFFF;
+  background: #041D27;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 109, 174, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 109, 174, 0.1);
   margin-bottom: 30px;
+  border-radius: 7px;
   padding: 40px;
   border: none;
   display: block;
@@ -3498,20 +3561,23 @@ section .subtitle {
 }
 
 .moduleFaq .accordion .acc-heading .header-acc {
-  font-family: Raleway;
+  font-family: 'Lato';
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 34px;
   letter-spacing: 0.5px;
   text-align: left;
-  color: #222;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -3536,8 +3602,15 @@ section .subtitle {
 }
 
 .moduleFaq .accordion .acc-heading .acc-content .inner p {
-  margin: 20px 0;
-  color: #606060;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin: 20px 0 0;
+  color: #fff;
   cursor: auto;
 }
 
@@ -3569,7 +3642,7 @@ footer {
 footer .footer-container {
   width: 100%;
   height: auto;
-  background: #379FDD;
+  background: #041D27;
   padding-top: 40px;
 }
 
@@ -3646,7 +3719,7 @@ footer .footer-container .form-box {
 
 footer .footer-container .form-box form {
   width: 100%;
-  background: #5FBF40;
+  background: #607077;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3760,7 +3833,7 @@ footer .copy-box {
   width: 100%;
   margin: 0;
   padding: 10px 0;
-  background: #3192CC;
+  background: #041D27;
 }
 
 footer .copy-box .wrap {
