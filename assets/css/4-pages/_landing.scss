@@ -1241,7 +1241,49 @@ section {
 }
 //========== /Reviews Section
 
+//== Clients Section
+.moduleClients{
+    .title{
+        font-family: 'Poppins';
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $darkblue;
+        max-width: 880px;
 
+    }
+    .clientes-box{
+        width: 100%;
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                width: 20%;
+                width: 100%;
+                padding: 10px;
+                @include respond-to-min(550){
+                    width: 50%;
+                }
+                @include respond-to-min(750){
+                    width: 20%;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+//========== /Clients Section
 
 //== Faq Section ::::
 .moduleFaq {
