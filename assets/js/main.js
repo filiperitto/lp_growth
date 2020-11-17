@@ -24,17 +24,12 @@ for (var i = 0; i < itemNavComponent.length; i++) {
 
 
 //-== modalAbout Toggle
-function modalAboutToggle() {
-    document.getElementById('modalAbout').classList.toggle('open');
-    document.getElementById('body').classList.toggle('scrollhidden');
-}
 
-// Select all the elements with example class.
-var modalAboutComponent = document.querySelectorAll('.cta-videoAbout');
 
-for (var i = 0; i < modalAboutComponent.length; i++) {
-    modalAboutComponent[i].addEventListener('click', modalAboutToggle);
-}
+var lightboxInlineIframe = GLightbox({
+    'selector': '.glightbox4'
+});
+
 //======================== /modalAbout Toggle
 
 
@@ -73,27 +68,26 @@ function scrollAnchors(e, respond = null) {
 //======================== /Anchor Scrollsmooth
 
 
-
-
-
 //== Slider Card
-new Glider(document.querySelector('.cards-glider'), {
-    slidesToShow: 1.2,
-    slidesToScroll: 1,
-    scrollLock: false,
-    dots: '#dots-cards',
-    arrows: {
-        prev: '.prev-cards',
-        next: '.next-cards'
-    },
-    responsive: [{
-        breakpoint: 750,
-        settings: {
-            // Set to `auto` and provide item width to adjust to viewport
-            slidesToShow: 2,
-        }
-    }]
-});
+(function(){
+    new Glider(document.querySelector('.cards-glider'), {
+        slidesToShow: 1.2,
+        slidesToScroll: 1,
+        scrollLock: false,
+        dots: '#dots-cards',
+        arrows: {
+            prev: '.prev-cards',
+            next: '.next-cards'
+        },
+        responsive: [{
+            breakpoint: 750,
+            settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2,
+            }
+        }]
+    });
+})();
 //======================== /Slider Card
 
 
