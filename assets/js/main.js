@@ -1,30 +1,4 @@
-
-//-== HamburgerMenu Toggle
-function hamburgueToggle() {
-    document.getElementById('hamb').classList.toggle('open');
-    document.getElementById('header-main').classList.toggle('open');
-}
-
-// Select all the elements with example class.
-var hambComponent = document.querySelectorAll('.hamb');
-var itemNavComponent = document.querySelectorAll('.itemNav');
-
-// Loop through the elements.
-for (var i = 0; i < hambComponent.length; i++) {
-    hambComponent[i].addEventListener('click', hamburgueToggle);
-}
-for (var i = 0; i < itemNavComponent.length; i++) {
-    itemNavComponent[i].addEventListener('click', hamburgueToggle);
-}
-//======================== /HamburgerMenu Toggle
-
-
-
-
-
-
 //-== modalAbout Toggle
-
 
 var lightboxInlineIframe = GLightbox({
     'selector': '.glightbox4'
@@ -33,39 +7,35 @@ var lightboxInlineIframe = GLightbox({
 //======================== /modalAbout Toggle
 
 
+(function(){
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 27, 2020 00:00:00").getTime();
 
+    // Update the count down every 1 second
+    var x = setInterval(function() {
 
-//== Anchor Scrollsmooth
-// Vanilla JavaScript Scroll to Anchor @ https://perishablepress.com/vanilla-javascript-scroll-anchor/
+    // Get today's date and time
+    var now = new Date().getTime();
 
-(function() {
-	scrollTo();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("counterBoy").innerHTML = days + "d " + hours + "h ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("counterBoy").innerHTML = "EXPIRED";
+    }
+    }, 1000);
 })();
-
-function scrollTo() {
-	const links = document.querySelectorAll('.menu-item a');
-	links.forEach(each => (each.onclick = scrollAnchors));
-}
-
-function scrollAnchors(e, respond = null) {
-	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-	e.preventDefault();
-	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-	const targetAnchor = document.querySelector(targetID);
-	if (!targetAnchor) return;
-	const originalTop = distanceToTop(targetAnchor);
-	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
-	const checkIfDone = setInterval(function() {
-		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-		if (distanceToTop(targetAnchor) === 0 || atBottom) {
-			targetAnchor.tabIndex = '-1';
-			targetAnchor.focus();
-			window.history.pushState('', '', targetID);
-			clearInterval(checkIfDone);
-		}
-	}, 150);
-}
-//======================== /Anchor Scrollsmooth
 
 
 //== Slider Card
@@ -93,71 +63,74 @@ function scrollAnchors(e, respond = null) {
 
 
 
-
 //== Slider Card
-new Glider(document.querySelector('.glider-reviews'), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    scrollLock: false,
-    arrows: {
-        prev: '.prev-reviews',
-        next: '.next-reviews'
-    },
-    responsive: [{
-        breakpoint: 750,
-        settings: {
-            // Set to `auto` and provide item width to adjust to viewport
-            slidesToShow: 2,
-        }
-    }]
-});
+(function(){
+    new Glider(document.querySelector('.glider-reviews'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        scrollLock: false,
+        arrows: {
+            prev: '.prev-reviews',
+            next: '.next-reviews'
+        },
+        responsive: [{
+            breakpoint: 750,
+            settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2,
+            }
+        }]
+    });
+})();
 //======================== /Slider Card
 
 
 
 
 //== /Accordion Module
-let accTitle = document.getElementsByClassName("acc-heading");
-let accContent = document.getElementsByClassName("acc-content");
-let singleMode = true;
-
-for( let j=0; j<accContent.length; j++ ){
-    let realHeight = accContent[j].offsetHeight;
-    accContent[j].setAttribute("data-height", realHeight + "px");
-    accContent[j].style.height = 0;
-}
-
-for( let i=0; i<accTitle.length; i++ ){
-    accTitle[i].onclick = function(){
-        let openedAcc = this.getAttribute('href').replace('#', '');
-
-        if( this.classList.contains("active") ){
-            this.classList.remove("active");
-            document.getElementById(openedAcc).style.height = 0;
+(function(){
+    let accTitle = document.getElementsByClassName("acc-heading");
+    let accContent = document.getElementsByClassName("acc-content");
+    let singleMode = true;
+    
+    for( let j=0; j<accContent.length; j++ ){
+        let realHeight = accContent[j].offsetHeight;
+        accContent[j].setAttribute("data-height", realHeight + "px");
+        accContent[j].style.height = 0;
+    }
+    
+    for( let i=0; i<accTitle.length; i++ ){
+        accTitle[i].onclick = function(){
+            let openedAcc = this.getAttribute('href').replace('#', '');
+    
+            if( this.classList.contains("active") ){
+                this.classList.remove("active");
+                document.getElementById(openedAcc).style.height = 0;
+                
+                return false;
+            }
+            
+            if( singleMode ){						
+                for(let k=0; k<accTitle.length; k++) {
+                    accTitle[k].classList.remove("active");
+                }			
+    
+    
+                for(let j=0; j<accContent.length; j++) {
+                    accContent[j].style.height = 0;
+                }		
+            }
+            
+            this.classList.add("active");
+            
+            
+            
+            document.getElementById(openedAcc).style.height = accContent[i].getAttribute("data-height");
             
             return false;
         }
-        
-        if( singleMode ){						
-            for(let k=0; k<accTitle.length; k++) {
-                accTitle[k].classList.remove("active");
-            }			
-
-
-            for(let j=0; j<accContent.length; j++) {
-                accContent[j].style.height = 0;
-            }		
-        }
-        
-        this.classList.add("active");
-        
-        
-        
-        document.getElementById(openedAcc).style.height = accContent[i].getAttribute("data-height");
-        
-        return false;
     }
-}
+})();
 //======================== /Accordion Module
         
 

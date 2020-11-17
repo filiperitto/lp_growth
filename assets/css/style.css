@@ -3393,6 +3393,7 @@ section .subtitle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 @media only screen and (min-width: 750px) {
@@ -3402,6 +3403,22 @@ section .subtitle {
     top: 20px;
     right: 60px;
   }
+}
+
+.moduleHero.style2 .selo-timer .counterBoy {
+  color: #112b3e;
+  position: absolute;
+  font-size: 26px;
+  font-family: 'Poppins';
+  opacity: 1;
+  font-weight: bold;
+  top: 28px;
+  left: 50px;
+  width: 116px;
+  background: #e39948;
+  padding: 8px;
+  border-radius: 9px;
+  text-align: center;
 }
 
 .moduleHero .mask {
@@ -4059,6 +4076,7 @@ section .subtitle {
     -ms-flex-item-align: baseline;
         align-self: baseline;
     margin-top: 95px;
+    width: 50%;
   }
 }
 

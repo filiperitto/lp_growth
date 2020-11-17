@@ -447,6 +447,7 @@ section {
             width: 100%;
             display: flex;
             justify-content: center;
+            position: relative;
 
             @include respond-to-min(750){
                 width: 261px;
@@ -454,6 +455,21 @@ section {
                 top: 20px;
                 right: 60px;
 
+            }
+            .counterBoy{
+                color: #112b3e;
+                position: absolute;
+                font-size: 26px;
+                font-family: 'Poppins';
+                opacity: 1;
+                font-weight: bold;
+                top: 28px;
+                left: 50px;
+                width: 116px;
+                background: #e39948;
+                padding: 8px;
+                border-radius: 9px;
+                text-align: center;
             }
         }
     }
@@ -959,6 +975,7 @@ section {
                         padding: 40px;
                         align-self: baseline;
                         margin-top: 95px;
+                        width: 50%;
                     }
                     h5,
                     h2{
