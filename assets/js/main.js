@@ -7,7 +7,7 @@ var lightboxInlineIframe = GLightbox({
 //======================== /modalAbout Toggle
 
 
-(function(){
+(function(){  //== https://www.w3schools.com/howto/howto_js_countdown.asp
     // Set the date we're counting down to
     var countDownDate = new Date("Nov 27, 2020 00:00:00").getTime();
 
