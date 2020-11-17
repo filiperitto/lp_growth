@@ -1904,7 +1904,6 @@ small {
 }
 
 p {
-  opacity: 0.8;
   margin: 0 0 20px 0;
   font-size: 18px;
   font-style: normal;
@@ -3986,9 +3985,14 @@ section .subtitle {
   background: #041D27;
 }
 
+.moduleEquipes .fix {
+  padding-bottom: 0;
+}
+
 .moduleEquipes .title {
   text-align: left;
   color: #ffffff;
+  margin: 0;
 }
 
 .moduleEquipes .loop-equipes .user-one {

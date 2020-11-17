@@ -922,9 +922,13 @@ section {
 //== Equipes Section ::::
 .moduleEquipes{
     background: $darkblue;
+    .fix{
+        padding-bottom: 0;
+    }
     .title{
         text-align: left;
         color: #ffffff;
+        margin: 0;
     }
     .loop-equipes{
         //border-top: 2px solid #59B98A;
