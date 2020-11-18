@@ -3948,16 +3948,22 @@ section .subtitle {
   width: 100%;
 }
 
-.moduleDivider-banner .text-box .btn {
+.moduleDivider-banner .text-box .btn-wrap {
   width: 100%;
-  margin-top: 20px;
 }
 
 @media only screen and (min-width: 750px) {
-  .moduleDivider-banner .text-box .btn {
-    width: 50%;
-    margin-left: 15%;
+  .moduleDivider-banner .text-box .btn-wrap {
+    width: 80%;
   }
+}
+
+.moduleDivider-banner .text-box .btn-wrap span {
+  color: #fff;
+}
+
+.moduleDivider-banner .text-box .btn {
+  width: 100%;
 }
 
 .moduleDivider-banner.second {
@@ -4045,6 +4051,23 @@ section .subtitle {
   text-align: center;
 }
 
+.moduleDivider-banner.third .text-box p strike {
+  position: relative;
+}
+
+.moduleDivider-banner.third .text-box p strike::after {
+  content: '';
+  position: absolute;
+  width: 101%;
+  height: 4px;
+  background: #d82e2e;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 4px;
+  bottom: 0;
+}
+
 @media only screen and (min-width: 750px) {
   .moduleDivider-banner.third .text-box p {
     font-size: 45px;
@@ -4092,6 +4115,12 @@ section .subtitle {
   text-align: left;
   color: #ffffff;
   margin: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .moduleEquipes .title {
+    margin-bottom: 70px;
+  }
 }
 
 .moduleEquipes .loop-equipes .user-one {
@@ -4486,6 +4515,10 @@ section .subtitle {
   color: #fff;
 }
 
+.moduleAbout.style1 .text-box .btn-wrap span {
+  color: #fff;
+}
+
 .moduleAbout.style1 .wrapper-video:after {
   top: -25px;
   bottom: auto;
@@ -4538,6 +4571,12 @@ section .subtitle {
   text-align: left;
 }
 
+@media only screen and (max-width: 600px) {
+  .moduleReviewsCards .text-box h1 {
+    height: 126px;
+  }
+}
+
 .moduleReviewsCards .text-box p {
   color: #041D27;
   font-size: 16px;
@@ -4547,6 +4586,12 @@ section .subtitle {
   letter-spacing: 3px;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .moduleReviewsCards .text-box p {
+    height: 32px;
+  }
 }
 
 .moduleReviewsCards .text-box .box-btn-glider {
@@ -4560,6 +4605,12 @@ section .subtitle {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .moduleReviewsCards .text-box .box-btn-glider {
+    height: 51px;
+  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -4818,6 +4869,8 @@ section .subtitle {
 .moduleFaq .accordion .acc-heading svg {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .moduleFaq .accordion .acc-heading.active {
