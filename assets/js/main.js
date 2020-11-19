@@ -164,7 +164,7 @@ new ClipboardJS('.btn-copy');
   })
         
 
-  //== Modal Toggle
+  //== Modal formulario Toggle
   function modalSample1Toggle() {
       document.getElementById('modalSample1').classList.toggle('open');
       document.getElementById('inv-modal1').classList.toggle('open');
@@ -177,4 +177,4 @@ new ClipboardJS('.btn-copy');
   // Add the class margin to the individual elements.
   modalSample1[i].addEventListener('click', modalSample1Toggle);
   }
-  //------------------------ Modal Header
+  //------------------------ Modal formulario
