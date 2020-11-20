@@ -3177,7 +3177,8 @@ MENU HAMBUGER ANIMATION
   position: relative;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"],
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"] {
   width: 100%;
   background: #ffffff;
   border: 0;
@@ -3194,40 +3195,49 @@ MENU HAMBUGER ANIMATION
 }
 
 @media only screen and (min-width: 750px) {
-  .modalBox .modal-container form .form_cont .input-wrap input {
+  .modalBox .modal-container form .form_cont .input-wrap input[type="text"],
+  .modalBox .modal-container form .form_cont .input-wrap input[type="email"] {
     min-width: 400px;
   }
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input::-webkit-input-placeholder {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]::-webkit-input-placeholder,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]::-webkit-input-placeholder {
   color: #585858;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input:-ms-input-placeholder {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]:-ms-input-placeholder,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]:-ms-input-placeholder {
   color: #585858;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input::-ms-input-placeholder {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]::-ms-input-placeholder,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]::-ms-input-placeholder {
   color: #585858;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input::placeholder {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]::placeholder,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]::placeholder {
   color: #585858;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input:valid {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]:valid,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]:valid {
   border-color: #5FBF40;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input:valid ~ .svg-valid {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"]:valid ~ .svg-valid,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"]:valid ~ .svg-valid {
   opacity: 1;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input[data-touched]:invalid {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"][data-touched]:invalid,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"][data-touched]:invalid {
   border-color: #FF443E;
 }
 
-.modalBox .modal-container form .form_cont .input-wrap input[data-touched]:invalid ~ .svg-error {
+.modalBox .modal-container form .form_cont .input-wrap input[type="text"][data-touched]:invalid ~ .svg-error,
+.modalBox .modal-container form .form_cont .input-wrap input[type="email"][data-touched]:invalid ~ .svg-error {
   opacity: 1;
 }
 
@@ -3278,6 +3288,11 @@ MENU HAMBUGER ANIMATION
 
 .modalBox .modal-container form .form_cont .input-wrap.valid .svg-valid {
   opacity: 1;
+}
+
+.modalBox .modal-container form .form_cont .input-wrap.checkbox label a {
+  color: #5FBF40;
+  text-decoration: underline;
 }
 
 .modalBox .modal-container form .form_cont span {
@@ -5516,5 +5531,24 @@ footer .copy-box ul li a {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 29, 39, 0.65)), to(rgba(4, 29, 39, 0.64)));
   background: linear-gradient(180deg, rgba(4, 29, 39, 0.65) 0%, rgba(4, 29, 39, 0.64) 100%);
+}
+
+.termos .moduleAbout .text-box {
+  width: 100%;
+}
+
+.termos .moduleAbout .text-box h2 {
+  color: #fff;
+}
+
+.termos .moduleAbout .text-box p, .termos .moduleAbout .text-box li {
+  font-family: 'Lato';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
