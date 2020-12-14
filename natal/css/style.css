@@ -1630,6 +1630,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -3064,9 +3065,52 @@ MENU HAMBUGER ANIMATION
 
 .modalBox .modal-container {
   background: #607077;
-  padding: 35px 50px;
+  padding: 35px 20px;
   position: relative;
   z-index: 2;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+  .modalBox .modal-container {
+    padding: 35px 50px;
+  }
+}
+
+@media only screen and (min-height: 820px) {
+  .modalBox .modal-container {
+    overflow-y: initial;
+    height: initial;
+  }
+}
+
+.modalBox .modal-container .close {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 750px) {
+  .modalBox .modal-container .close {
+    right: 35px;
+  }
 }
 
 .modalBox .modal-container .wrap {
@@ -3168,7 +3212,7 @@ MENU HAMBUGER ANIMATION
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px 30px;
+  padding: 15px 0;
 }
 
 .modalBox .modal-container form .form_cont label {
@@ -3534,11 +3578,19 @@ section .subtitle {
 
 .moduleHero.style2 .wrap {
   padding-bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 @media only screen and (min-width: 750px) {
   .moduleHero.style2 .wrap {
     padding-right: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -3547,6 +3599,7 @@ section .subtitle {
   padding: 0 20px;
   position: relative;
   z-index: 4;
+  margin-top: -100px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -3554,6 +3607,7 @@ section .subtitle {
     width: 50%;
     padding: 0 30px;
     padding: 0;
+    margin-top: 0;
   }
 }
 
@@ -3640,6 +3694,7 @@ section .subtitle {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   position: relative;
+  top: -120px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -4259,12 +4314,19 @@ section .subtitle {
   margin-top: 65px;
   margin-bottom: 5px;
   font-family: 'Poppins';
-  font-size: 50px;
   font-style: normal;
   font-weight: 700;
-  line-height: 92px;
+  line-height: 46px;
   letter-spacing: 0px;
   text-align: center;
+  font-size: 35px;
+}
+
+@media only screen and (min-width: 750px) {
+  .moduleDivider-banner.third .text-box h1 {
+    font-size: 50px;
+    line-height: 92px;
+  }
 }
 
 .moduleDivider-banner.third .text-box p {
@@ -4275,12 +4337,19 @@ section .subtitle {
   opacity: 1;
   margin-bottom: 5px;
   font-family: 'Lato';
-  font-size: 45px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 500;
-  line-height: 64px;
+  line-height: 38px;
   letter-spacing: 0px;
   text-align: center;
+}
+
+@media only screen and (min-width: 750px) {
+  .moduleDivider-banner.third .text-box p {
+    font-size: 45px;
+    line-height: 64px;
+  }
 }
 
 .moduleDivider-banner.third .text-box p strike {
@@ -4300,22 +4369,15 @@ section .subtitle {
   bottom: 0;
 }
 
-@media only screen and (min-width: 750px) {
-  .moduleDivider-banner.third .text-box p {
-    font-size: 45px;
-    line-height: 64px;
-  }
-}
-
 .moduleDivider-banner.third .text-box p icon svg {
-  width: 33px;
-  height: 33px;
+  width: 60px;
+  height: 60px;
 }
 
 @media only screen and (min-width: 750px) {
   .moduleDivider-banner.third .text-box p icon svg {
-    width: 84px;
-    height: 80px;
+    width: 99px;
+    height: 95px;
   }
 }
 
@@ -4739,6 +4801,7 @@ section .subtitle {
 }
 
 .moduleAbout.style1 {
+  padding-top: 0;
   background: #041D27;
 }
 

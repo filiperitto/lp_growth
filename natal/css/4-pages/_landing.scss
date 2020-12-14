@@ -180,9 +180,36 @@
     }
     .modal-container{
         background: #607077;
-        padding: 35px 50px;
+        padding: 35px 20px;
         position: relative;
         z-index: 2;
+        overflow-y: scroll;
+        height: 100%;
+        @include respond-to-min(750){
+            padding: 35px 50px;
+        }
+        @include respond-to-min-h(820){
+            overflow-y: initial;
+            height: initial;
+        }
+        .close{
+            position: absolute;
+            top: 22px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: #fff;
+            padding: 0;
+            cursor: pointer;
+            z-index: 3;
+            @include respond-to-min(750){
+                right: 35px;
+            }
+        }
         .wrap{
             padding: 0;
         }
@@ -258,7 +285,7 @@
                 padding: 10px 0;
                 display: flex;
                 flex-direction: column;
-                padding: 15px 30px;
+                padding: 15px 0;
                 label{
                     font-size: 13px;
                     color: $white;
@@ -560,8 +587,10 @@ section {
         }
         .wrap{
             padding-bottom: 0;
+            flex-direction: column-reverse;
             @include respond-to-min(750){
                 padding-right: 0;
+                flex-direction: row;
             }
         }
         .text-box{
@@ -569,10 +598,12 @@ section {
             padding: 0 20px;
             position: relative;
             z-index: 4;
+            margin-top: -100px;
             @include respond-to-min(750){
                 width: 50%;
                 padding: 0 30px;
                 padding: 0;
+                margin-top: 0;
             }
             img{
                 width: 100%;
@@ -648,6 +679,7 @@ section {
             display: flex;
             flex-direction: column-reverse;
             position: relative;
+            top: -120px;
             @include respond-to-min(750){
                 width: 50%;
                 padding: 0;
@@ -1111,15 +1143,17 @@ section {
                 margin-bottom: 5px;
 
                 font-family: 'Poppins';
-                font-size: 50px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 92px;
+                line-height: 46px;
                 letter-spacing: 0px;
                 text-align: center;
+                
+                font-size: 35px;
 
                 @include respond-to-min(750){
-
+                    font-size: 50px;
+                    line-height: 92px;
                 }
             }
             p{
@@ -1131,12 +1165,17 @@ section {
                 margin-bottom: 5px;;
 
                 font-family: 'Lato';
-                font-size: 45px;
+                font-size: 28px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 64px;
+                line-height: 38px;
                 letter-spacing: 0px;
                 text-align: center;
+
+                @include respond-to-min(750){
+                    font-size: 45px;
+                    line-height: 64px;
+                }
                 strike{
                     position: relative;
                     &::after{
@@ -1152,18 +1191,13 @@ section {
                         bottom: 0;
                     }
                 }
-
-                @include respond-to-min(750){
-                    font-size: 45px;
-                    line-height: 64px;
-                }
                 icon{
                     svg{
-                        width: 33px;
-                        height: 33px;
+                        width: 60px;
+                        height: 60px;
                         @include respond-to-min(750){
-                            width: 84px;
-                            height: 80px;
+                            width: 99px;
+                            height: 95px;
 
                         }
                     }
@@ -1499,6 +1533,7 @@ section {
     }
 
     &.style1{
+        padding-top: 0;
         background: $darkblue;
         .text-box{
             h1,
