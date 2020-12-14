@@ -1595,8 +1595,26 @@ section {
     }
     .slider-box{
         width: 100%;
+        position: relative;
         @include respond-to-min(750){
             width: 70%;
+        }
+
+        .selo-nat{
+            width: 116px;
+            height: 129px;
+            position: absolute;
+            top: -61px;
+            right: -50px;
+            &.front{
+                z-index: 2;
+                img{
+                    margin: 48px 0px 0 5px;
+                }
+            }
+            &.back{
+
+            }
         }
         .item-box{
             width: auto;

@@ -4865,12 +4865,29 @@ section .subtitle {
 
 .moduleReviewsCards .slider-box {
   width: 100%;
+  position: relative;
 }
 
 @media only screen and (min-width: 750px) {
   .moduleReviewsCards .slider-box {
     width: 70%;
   }
+}
+
+.moduleReviewsCards .slider-box .selo-nat {
+  width: 116px;
+  height: 129px;
+  position: absolute;
+  top: -61px;
+  right: -50px;
+}
+
+.moduleReviewsCards .slider-box .selo-nat.front {
+  z-index: 2;
+}
+
+.moduleReviewsCards .slider-box .selo-nat.front img {
+  margin: 48px 0px 0 5px;
 }
 
 .moduleReviewsCards .slider-box .item-box {
