@@ -4555,7 +4555,7 @@ section .subtitle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 0;
 }
 
 .moduleEquipes .btn-box .btn-wrap span {
@@ -4834,9 +4834,9 @@ section .subtitle {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4847,9 +4847,7 @@ section .subtitle {
 
 @media only screen and (min-width: 750px) {
   .moduleReviewsCards .text-box .box-btn-glider {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    opacity: 0;
   }
 }
 
@@ -4896,6 +4894,12 @@ section .subtitle {
   padding: 45px;
   border-radius: 3px;
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  .moduleReviewsCards .slider-box .item-box {
+    margin-left: 0;
+  }
 }
 
 .moduleReviewsCards .slider-box .item-box .header {
