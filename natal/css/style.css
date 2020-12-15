@@ -4748,7 +4748,11 @@ section .subtitle {
 
 .moduleAbout .text-box .btn-wrap {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   max-width: 341px;
+  margin-top: 50px;
 }
 
 .moduleAbout .wrapper-video {

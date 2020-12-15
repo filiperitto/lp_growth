@@ -1483,7 +1483,9 @@ section {
         }
         .btn-wrap{
             width: 100%;
+            width: fit-content;
             max-width: 341px;
+            margin-top: 50px;
             .btn{
 
             }
