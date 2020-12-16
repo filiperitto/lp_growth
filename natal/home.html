@@ -38,7 +38,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
-    <!-- ##INCLUDE_CSS## -->
+    ##INCLUDE_CSS##
 
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="js/main.js" as="script">
@@ -67,6 +67,7 @@
 </head>
 
 <body id="body">
+    ##INCLUDE_MODAL##
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXTZZBJ" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -199,12 +200,12 @@
                     <h1 class="hero-title">Growth 101: Alavanque sua carreira em marketing e growth e o resultado do seu negócio</h1>
                     <p>Aprenda, no seu ritmo, os conceitos fundamentas da metodologia responsável pelo crescimento acelerado de empresas como o Facebook e o Twitter</p>
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas Limitadas</span>
                     </div>
                 </div>
-                <div class="img-box">
-                    <img alt="" src="imgs/img-hero.png">
+                <div class="img-box" style="z-index: 99;">
+                    <img alt="" src="imgs/svg/teste.svg">
                 </div>
                 <div class="mask"></div>
             </div>
@@ -236,7 +237,7 @@
                     </p>
                     
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas limitadas</span>
                     </div>
                 </div>
@@ -298,7 +299,7 @@
                 </div>
             </div>
             <div class="btn-wrap">
-                <a href="javascript:void(0)" class="btn center-margin">Compre agora</a>
+                <a href="javascript:void(0)" class="btn center-margin" onClick="openModal()">Compre agora</a>
                 <span><b>*</b>Vagas Limitadas</span>
             </div>
             
@@ -379,7 +380,7 @@
             <div class="wrap grid control-bar">
                 <div class="btn-box">
                     <div class="btn-wrap">        
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas Limitadas</span>
                     </div>
                 </div>
@@ -407,7 +408,7 @@
                     <h1>Aprenda e conecte-se com os melhores!</h1>
                     
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas limitadas</span>
                     </div>
                 </div>
@@ -480,7 +481,7 @@
                 </div>
                 <div class="btn-box">
                     <div class="btn-wrap">
-                        <a href="javascript:(0)" class="btn">Compre agora</a>
+                        <a href="javascript:(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas Limitadas</span>
                     </div>
                 </div>
@@ -627,7 +628,7 @@
                     </p>
                     <p>e Pague em até 10x de R$12,50</p>
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas limitadas</span>
                     </div>
                 </div>
@@ -662,7 +663,7 @@
                         próprio ritmo.
                     </p>
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas limitadas</span>
                     </div>
                 </div>
@@ -840,7 +841,7 @@
 
                 <div class="btn-box">
                     <div class="btn-wrap">
-                        <a href="javascript:void(0)" class="btn">Compre agora</a>
+                        <a href="javascript:void(0)" class="btn" onClick="openModal()">Compre agora</a>
                         <span><b>*</b>Vagas Limitadas</span>
                     </div>
                     
@@ -958,7 +959,7 @@
         </footer>
     </div>
 
-    <!-- ##INCLUDE_JS## -->
+    ##INCLUDE_JS##
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.js"></script>
     <script src="js/glightbox.min.js"></script>
